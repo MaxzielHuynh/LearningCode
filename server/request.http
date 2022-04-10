@@ -1,0 +1,34 @@
+POST http://localhost:5000/api/auth/register
+
+Content-Type: application/json
+
+{ 
+    "username": "binbo",
+    "password": "bin",
+}
+
+
+###
+
+POST http://localhost:5000/api/auth/login
+
+Content-Type: application/json
+
+{
+    "username": "binbo12",
+    "password": "123"
+}
+
+
+###
+
+POST http://localhost:5000/api/auth/posts
+
+Content-Type: application/json
+authorization:
+{
+    "title": "my first post",
+"description": "fvwfv",
+"url": "google.com",
+"status": "LEARNING",
+}
