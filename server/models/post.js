@@ -3,7 +3,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const SkillSchema = new Schema({
+const PostSchema = new Schema({
     title: {
         type: String,
         required: true,
@@ -24,4 +24,4 @@ const SkillSchema = new Schema({
     },
 });
 
-module.exports = mongoose.model('skills', SkillSchema);
+module.exports = mongoose.model('posts', PostSchema);

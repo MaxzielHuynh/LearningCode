@@ -1,10 +1,9 @@
 /** @format */
 
-//require('dotenv').config();
-const dotenv = require("dotenv");
-dotenv.config();
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 const authRouter = require('./routes/auth');
 const postRouter = require('./routes/post');
@@ -28,11 +27,11 @@ const connectDB = async() => {
 connectDB();
 
 const app = express();
-
 app.use(express.json());
+app.use(cors());
 
 app.use('/api/auth', authRouter);
-app.use('/api/post', postRouter);
+app.use('/api/posts', postRouter);
 
 const PORT = process.env.PORT || 5000;
 
